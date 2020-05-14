@@ -3,6 +3,7 @@ using Parser.Core.Habra;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -39,14 +40,21 @@ namespace Parser {
         }
 
         private void Parser_OnNewData(object arg1, string[] arg2) {
-            ListTitles.Items.Add(arg2);
+            for (int i = 0; i < arg2.Length; i++) {
+                ListTitles.Items.Add(arg2[i]);
+            }
         }
 
         // Метод кнопки старт.
         private void Button_Click(object sender, RoutedEventArgs e) {
+            var str1 = Convert.ToInt32(NumericStart.Text);
+            var str2 = Convert.ToInt32(NumericEnd.Text);
+
+            var num1 = Convert.ToInt32(str1);
+            var num2 = Convert.ToInt32(str2);
             // Пишет настройки парсера.
-            parser.Settings = new HabraSettings(Convert.ToInt32(NumericStart.Text), Convert.ToInt32(NumericEnd.Text));
-            parser.Start();
+            parser.Settings = new HabraSettings(num1, num2);            
+            parser.Start(); 
         }
 
         // Метод кнопки аборт.
