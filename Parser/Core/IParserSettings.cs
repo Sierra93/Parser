@@ -9,7 +9,7 @@ namespace Parser.Core {
     interface IParserSettings {
         string BaseUrl { get; set; }    // Url сайта, который нужно парсить.
 
-        public string Prefix { get; set; }
+        public string Prefix { get; set; }  // Номер страницы.
 
         public int StartPoint { get; set; } // С какой страницы парсить данные.
 

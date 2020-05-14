@@ -52,6 +52,7 @@ namespace Parser {
 
             var num1 = Convert.ToInt32(str1);
             var num2 = Convert.ToInt32(str2);
+
             // Пишет настройки парсера.
             parser.Settings = new HabraSettings(num1, num2);            
             parser.Start(); 
