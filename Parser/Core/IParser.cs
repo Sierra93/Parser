@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using AngleSharp.Html.Dom;
 
 namespace Parser.Core {
-    interface IParser {
-
+    interface IParser<T> where T : class {
+        T Parse(IHtmlDocument document);
     }
 }

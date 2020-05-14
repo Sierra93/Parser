@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <ListBox x:Name="ListTitles" Margin="10,42,531,42"/>
+        <Label Content="Label" HorizontalAlignment="Center" Margin="0,59,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NumericStart" HorizontalAlignment="Left" Margin="381,85,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="" InputScope="Number"/>
+        <Label Content="Label" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NumericEnd" HorizontalAlignment="Left" Margin="381,141,0,0" Text="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="" InputScope="Number"/>
+        <Button Content="Start" HorizontalAlignment="Left" Margin="401,182,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Abort" HorizontalAlignment="Left" Margin="400,215,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Border BorderThickness="1" BorderBrush="Black"/>
 
     </Grid>
 </Window>
